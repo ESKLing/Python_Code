@@ -1,7 +1,7 @@
 import unittest
 
 from functions_and_methods import vol, ran_bool, multiply, palindrome, ispangram
-#or import functions_and_methods if there is only one function on that file/ to call specific functions
+
 
 class Test_functions_and_methods(unittest.TestCase):
 
@@ -12,16 +12,6 @@ class Test_functions_and_methods(unittest.TestCase):
         result = vol(input)
 
         self.assertEqual(expectedResult, result)
-
-    #or
-    #     def test_volume(self):
-    #         input = 2
-    #         result = functions_and_methods.vol(input)
-    #
-    #         self.assertEqual(33.51, result)
-    # if __name__== '__main__':
-    #     unittest.main()
-
 
     def test_volume_2(self):
         input = 15
