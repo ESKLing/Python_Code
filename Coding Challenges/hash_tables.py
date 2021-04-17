@@ -1,17 +1,14 @@
 def checkMagazine(magazine, note):
-    d = {}
+    mag_word_count = {}
     for word in magazine.split():
-        if word in d:
-            d[word] += 1
+        if word in mag_word_count:
+            mag_word_count[word] += 1
         else:
-            d[word] = 1
+            mag_word_count[word] = 1
 
     for word in note.split():
-        if word in d:
-            d[word] -= 1
-            if d[word] < 0:
-                return False
-        else:
+        if word not in mag_word_count or mag_word_count[word] <= 0:
             return False
+        mag_word_count[word] -= 1
 
     return True
